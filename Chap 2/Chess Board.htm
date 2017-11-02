@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Chess Board</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+   var str = " ";
+   var symbol = " ";
+
+   for(i=0 ; i<8 ;i++)
+   {
+       if((i%2) == 0 )
+       {
+
+       symbol = "#";
+       str = str + symbol;
+       }
+       else
+       {
+
+       str = " ";
+       str = str + symbol;
+       }
+       for(j=0 ; j<8; j++)
+       {
+
+       console.log(str);
+       }
+
+   }                   if((i%2) == 0 )
+       {
+          if(str.length < 9)
+       symbol = "#";
+       str = str + symbol;
+       }
+       else
+       {
+          if(str.length < 9)
+       str = " ";
+       str = str + symbol;
+       }   
+   </script>
+
+</body>
+
+</html>

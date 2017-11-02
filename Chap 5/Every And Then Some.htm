@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Every And Then Some</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+
+
+     function every(Tab,elementTab)
+     {
+         var rep,final ;
+
+         for(j=0 ; j<elementTab.length ; j++ )
+         {
+          for(i =0 ; i<Tab.length ; i++)
+          {
+              if(elementTab[j] == Tab[i])
+                {rep = true;
+                  final = rep && rep;
+                  }
+              else
+              {
+                rep = false;
+                final = rep && rep;
+                }
+
+
+          }
+        }
+        return final;
+       }
+
+
+   </script>
+
+</body>
+
+</html>

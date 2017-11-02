@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Sum Of the Range</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+
+ function range(start, end ,step)
+  {
+     var tab = [];
+     if(step == undefined || step == 0 || (isNaN(step)) == true)
+     {
+         step = 1;
+     for(i= start ; i<= end ; i++)
+
+      tab[i]= i;
+
+     }
+     else
+     {
+      for(k= start, j= start ; k<= end ;j= j+1, k=k+step)
+
+      tab[j]= k;
+
+
+      }
+
+       return tab;
+
+  }
+ function sum(tab)
+  {
+      var total =0 ;
+
+      for( var i in tab)
+      {
+        total = total + tab[i];
+      }
+      return console.log("The sum is:\t"+total);
+  }
+
+    var start = Number(prompt("Enter the start number"))   ;
+    var end = Number(prompt("Enter the end number"))   ;
+    var step = Number(prompt("Enter the step number"))   ;
+    var ch = range(start,end,step)  ;
+     for(i=0 ; i<ch.length ; i++) {
+    console.log(ch[i]);  }
+    sum(ch) ;
+
+   </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Deep comparison</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+      function deepEqual(value1, value2)
+      {
+        if(typeof(value1) == "object" && typeof(value2) == "object")
+        {
+         if( value1 != null && value2 != null)
+         {
+           var map1 = [];
+           var j=0;
+           for (var i in value1)
+           {
+            map1[j] = value1.i;
+            j++;
+           }
+           var map2 = [];
+           var k=0;
+           for (var i in value2)
+           {
+            map1[k] = value2.i;
+            k++;
+           }
+           if(map1.length == map2.length)
+           {
+              for(i=0 ; i< map1.length ; i++)
+              {
+                  if(map1[i] === map2[i])
+                  console.log("they have identically the same properties ");
+
+                  else
+                  console.log("These objects have the same number of properties but they are not equal");
+              }
+           }
+           else
+           console.log("They are not equal since they don't have the same number of properties");
+         }
+         else
+         {
+
+         }
+        }
+        else
+        {
+           if( value1 === value2)
+           console.log("These two values are equal");
+           else
+           console.log("There are not equal");
+
+        }
+      }
+
+      var ch1={left:1, right:2  };
+      var ch2={left:1 ,right:2  };
+
+    deepEqual(ch1,ch2)
+   </script>
+
+</body>
+
+</html>

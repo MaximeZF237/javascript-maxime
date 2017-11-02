@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Flattening</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+
+   function reduce(array , combine , start) {
+         var current = start;
+         for (var i = 0; i < array.length; i++)
+          current = combine(current , array[i]);
+               return current;
+                                    }
+    function  flatten(tabOfTabs)
+    {
+        var tab = [];
+        for( i = 0; i<tabOfTabs.length ; i++)
+        {
+           var subTab = tabOfTabs[i];
+           tab = tab.concat(subTab);
+
+
+        }
+
+        return tab;
+    }
+    //delete caracters'*/' at both end of the following code to run some trials of functions implemented above
+
+     /*console.log(flatten(["ABC",
+                           "DEF",
+                           [3,4],
+                           [5,6],
+                           [7,8,9]
+                           ])
+                 ); */
+   </script>
+
+
+</body>
+
+</html>
