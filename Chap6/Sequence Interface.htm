@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Sequence Interface</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+
+    var interface = { iterate : function (sequence)
+                                                   {
+
+                                                      if( (typeof sequence) == "Object")
+                                                       {
+                                                       for (var i in sequence)
+                                                          { console.log(i);
+                                                           console.log(sequence.i);
+                                                          }
+                                                        }
+                                                        else
+                                                        {
+                                                         for(i = 0; i< sequence.length ; i++)
+                                                              console.log(sequence[i]);
+                                                        }
+                                                     }
+
+
+                                 } ;
+   function logFive(seq)
+   {
+      for (var i in seq)
+      {
+        console.log(i);
+        console.log(seq.i);
+      }
+   }
+   var ArraySeq = {
+                   ch : [1,2,3,4,5,6],
+                   left:1,
+                   right:25
+                  };
+    console.log(interface.iterate(ArraySeq));
+   </script>
+
+</body>
+
+</html>

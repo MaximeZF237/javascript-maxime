@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+<meta charset="utf-8">
+  <title>Retry</title>
+</head>
+
+<body>
+   <script type="text/javascript">
+       function MultiplicatorUnitFailure(message) {
+    this.message = message;
+    this.stack = (new Error()).stack;
+    }
+    MultiplicatorUnitFailure.prototype = Object.create(Error.prototype);
+    MultiplicatorUnitFailure.prototype.name = "MultiplicatorUnitFailure";
+
+         function primitiveMultiplication(nber)
+     {
+
+       var factor = prompt("enter the multiplicator unit");
+         if(!isNaN(factor))   return nber*factor;
+         throw new MultiplicatorUnitFailure("Incorrect Multiplicator Unit :" + factor);
+     }
+
+     function retry(f)
+     {
+    for (;;) {
+    try {
+    var result = f;
+    console.log("result :\t", result);
+    break;
+    } catch (e) {
+    if (e instanceof MultiplicatorUnitFailure)
+    console.log("Not a valid Multiplicator. Try again.");
+    else
+    throw e;
+    }
+    }
+     }
+
+
+
+   retry(primitiveMultiplication(5));
+
+</script>
+
+</body>
+
+</html>
