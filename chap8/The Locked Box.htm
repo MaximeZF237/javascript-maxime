@@ -3,47 +3,46 @@
 <html>
 
 <head>
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <title>Locked Box</title>
 </head>
 
 <body>
 
-<script type="text/javascript">
+  <script type="text/javascript">
 
-var box = {
-locked : true ,
-unlock : function () { this . locked = false ; },
-lock : function () { this . locked = true ; },
-_content : [1,2] ,
-get content () {
-if ( this . locked ) throw new Error (" Locked !") ;
-return this . _content ;
-}
-};
+    var box = {
+      locked: true,
+      unlock: function () { this.locked = false; },
+      lock: function () { this.locked = true; },
+      _content: [1, 2],
+      get content() {
+        if (this.locked) throw new Error(" Locked !");
+        return this._content;
+      }
+    };
 
- function withBoxUnlocked(f)
- {
-   
-   try {
-    
-     box . locked = false ; 
-     f;
-    
-   } 
-   finally {
-   box.locked = true;
-   }
+    function withBoxUnlocked(f) {
 
- }      
+      try {
 
-  var show = withBoxUnlocked(function () {
-if ( box . locked == true) throw new Error (" Locked !") ;
-else return box._content ;
-});  
-    
+        box.locked = false;
+        f;
 
-</script>
+      }
+      finally {
+        box.locked = true;
+      }
+
+    }
+
+    var show = withBoxUnlocked(function () {
+      if (box.locked == true) throw new Error(" Locked !");
+      else return box._content;
+    });
+
+
+  </script>
 
 </body>
 
