@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>MonthNames Module</title>
+  <meta charset ="utf-8">
+</head>
+
+<body>
+   <script type="text/javascript">
+
+    var monthName = (function() {
+    var names = ["January","February","March","April","May","June","July",
+    "August","September","October","November","December"];
+    return {
+        getMonthName: function(number) { return names[number]; },
+        getMonthNumber: function(name) { return names.indexOf(name); }
+           };
+    })();
+
+
+
+    console.log(monthName.getMonthNumber("November"));
+
+   </script>
+</body>
+
+</html>

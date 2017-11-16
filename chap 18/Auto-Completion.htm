@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>AutoCompletion</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h3 style="text-align: center">Auto - Completion </h3>
+    <div style="margin: 470px;margin-top:auto">
+        <form>
+            <textarea style="width: 350px ;height :300px">
+             Type Here!
+     </textarea>
+            <br/>
+
+        </form>
+        <p>
+
+        </p>
+    </div>
+    <script type="text/javascript">
+
+        var textField = document.querySelector("textarea");
+        var result = document.querySelector("p");
+
+
+        textField.addEventListener("keydown", function (event) {
+
+
+            event.preventDefault();
+
+
+        });
+
+
+    </script>
+</body>
+
+</html>

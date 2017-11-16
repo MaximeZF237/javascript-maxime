@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Chap 13</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function elementTagByName(node, tagName) {
+
+            var found = [];
+
+            var len = node.childNodes.length;
+            for (var i = 0; i < len; i++) {
+                var child = node.childNodes[i];
+                if (child.nodeType == 1) {
+                    if (child.name == tagName) {
+                        found.push(child);
+                    }
+                }
+            }
+            console.log(found.length);
+        }
+
+        elementTagByName(document.body, "p");
+    </script>
+</body>
+
+</html>

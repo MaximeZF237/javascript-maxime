@@ -9,8 +9,43 @@
 
 <body>
   <script type="text/javascript">
-    console.log(/ca(r|t)/.test("cat));
-  console.log(/ca(r|t)/.test("car));
+
+    var regexp1 = /ca(r|t)/;
+
+    // delete the '//' to run some trials or to construct your own trials
+
+    //console.log(regexp1.test("cat"));
+    //console.log(regexp1.test("car"));
+
+    var regexp2 = /pr?op/;
+    //console.log(regexp2.test("pop"));
+    //console.log(regexp2.test("prop"));
+
+    var regexp3 = /fer{2}(et|y|ari)/;
+
+    //console.log(regexp3.test("ferret"));
+    //console.log(regexp3.test("ferrari"));
+    //console.log(regexp3.test("ferry"));
+
+    var regexp4 = /.(ious)/;
+
+    //console.log(regexp4.test("tedious"));
+    //console.log(regexp4.test("cu  .0432ck kj,!!!:;:!!:,:;ù$ùù!::# k / ious"));
+
+    var regexp5 = /\s(\.|,|:|;)/g;
+
+    //console.log(regexp5.test(" ."));
+
+    var regexp6 = /(\w){6,}/;
+
+    //console.log(regexp6.test("max"));
+    //console.log(regexp6.test("max237"));
+    //console.log(regexp6.test("maxm?n"));
+
+    var regexp7 = /[\w]^e/;
+   /*var regexp8 = /(([a-d])*|([f-z])*|(\d)*)/ ;
+
+   console.log(regexp8.test("vgfxegxgff"));*/
 
   </script>
 

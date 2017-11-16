@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>JavaScript Workbench</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h3 style="text-align: center">Try to run Your piece of Javascript Code here </h3>
+    <div style="margin: 470px;margin-top:auto">
+        <form>
+            <textarea style="width: 350px ;height :300px">
+
+     </textarea>
+            <br/>
+            <button type="submit" style="margin:140px;margin-top:auto">
+                Run Code
+            </button>
+        </form>
+        <p>
+            <!--Returned value of the code will be displayed in this portion-->
+        </p>
+    </div>
+    <script type="text/javascript">
+
+        var textField = document.querySelector("textarea");
+        var result = document.querySelector("p");
+
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (event) {
+
+            try {
+
+                var customScript = textField.value;
+                var code = new Function(" ", "customScript");
+                var run = code.call(this);
+                result.textContent = String(run);
+
+            }
+            catch (e) {
+                console.log("There's is an error" + e);
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

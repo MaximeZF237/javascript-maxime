@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Build A Table</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        function buildTable(tab) {
+
+            var tabTag = document.createElement("table");
+            document.body.appendChild(tabTag);
+
+            var tabHeaderRow = document.createElement("tr");
+            tabTag.appendChild(tabHeaderRow);
+
+            
+
+            for (i = 0; i < (tab.length - 1); i++) {
+
+                var tabRow = document.createElement("tr");
+                tabTag.appendChild(tabRow);
+
+                for (var j in tab[i]) {
+
+                    var tabHeader = document.createElement("th");
+                    var textTabHeader = document.createTextNode(j);
+                    tabHeaderRow.appendchild(tabHeader);
+                    tabHeader.appendchild(textTabHeader);
+                    var tabCell = document.createElement("th");
+                    var textCell = document.createTextNode(tab[i].j);
+                    tabRow.appendchild(tabCell);
+                    tabCell.appendchild(textCell);
+                }
+            }
+
+            return tabTag;
+
+
+        }
+
+    </script>
+
+    <p>
+        <button onclick="buildTable([
+        { Town:Buea , Tel : 690767631},
+        { Town:Buea , Tel : 672162269},
+        { Town:Yaounde , Tel : 696941142}])">
+            Build A TABLE
+        </button>
+    </p>
+
+</body>
+
+</html>
